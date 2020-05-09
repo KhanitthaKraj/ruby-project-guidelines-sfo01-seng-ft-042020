@@ -7,6 +7,14 @@ class CommandLineInterface
         @font = TTY::Font.new(:straight)
     end
 
+    def banner
+        puts
+        puts "-------------------------".cyan.bold
+        puts "| 🧸 LITTLE MATH LAB 🧸 |".cyan.bold
+        puts "-------------------------".cyan.bold
+        puts
+    end
+
     def greeting
         system "clear"
         puts
@@ -17,13 +25,14 @@ class CommandLineInterface
         puts
         puts "✏️  A Basic Math Exercise for Children at Preeschool Age ✏️".bold
         puts
-        puts "Are you exited to get started?\n".blue.on_white.bold
-        prompt.keypress("Press ENTER to continue!".cyan, keys: [:return])
+        puts "Are you exited to get started?\n".magenta.on_light_yellow.bold
+        prompt.keypress("Press ENTER to continue!".magenta, keys: [:return])
         check_account
     end
 
     def check_account
         system "clear"
+        banner
         puts "First, are you already a part of Little Math Lab community?".cyan.bold
         prompt.select("Select One Option".underline) do |menu|
             menu.choice "I've been here before",-> { 
@@ -110,6 +119,7 @@ class CommandLineInterface
 
     def menu
         system "clear"
+        banner
         puts "MAIN MENU".bold
         prompt.select("Select One Option".underline) do |menu|
             menu.choice 'MY ACCOUNT', -> { my_account }
@@ -121,8 +131,8 @@ class CommandLineInterface
     def quit_game
         system "clear"
         puts "WE HOPE TO SEE YOU AGAIN SOON!".bold
-        puts "........... GOODBYE ...........".bold
-        puts "...............................".bold
+        puts "........... GOODBYE ..........".bold
+        return 0
     end
     
     def question
@@ -164,6 +174,8 @@ class CommandLineInterface
     end
 
     def game
+        system "clear"
+        banner
         i = 0
         5.times do
             i += 1
@@ -171,8 +183,7 @@ class CommandLineInterface
             question
         end
         puts "\nYou did great!".magenta.bold
-        puts
-        puts "You got #{@correct_score} correct, and #{@incorrect_score} incorrect.".light_blue.on_light_green
+        puts "\nYou got #{@correct_score} correct, and #{@incorrect_score} incorrect.".light_blue.on_light_green
         puts "\nKEEP UP THE GOOD WORK!\n".magenta.bold
         prompt.keypress("Press ENTER to go back to the main menu".underline, keys: [:return])
         menu
