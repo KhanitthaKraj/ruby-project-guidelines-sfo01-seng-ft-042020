@@ -5,7 +5,7 @@
 LITTLE MATH LAB is a command-line application designed to teach basic mathematic skills to children at preschool age.
 
 ## Our Story
-As we come together as a team, we found common ground. As parents who have children around the same age, we both share the same goal. We want our children to have the best early learning experience and to be prepared for kindergarten. Focusing on Math, Little Math Lab is designed to be friendly and engaging for children to learn and have fun learning. This is our "Module1 Web Development Final Project", it is the first step, and we can see many potentials and how much more this application can grow. We are excited and looking forward to developing this application as our children grow.
+Coming together as a team, we found common ground. As parents who have children around the same age, we both share the same goal. We want our children to have the best early learning experience and to be prepared for kindergarten. Focusing on Math, Little Math Lab is designed to be friendly and engaging for children to learn and have fun learning. This is our "Module1 Web Development Final Project", it is the first step, and we can see many potentials and how much more this application can grow. We are excited and looking forward to developing this application as our children grow.
 
 ## Installation
 - Fork and clone this repository into your local computer.
